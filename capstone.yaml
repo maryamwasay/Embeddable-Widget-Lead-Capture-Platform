@@ -1,0 +1,68 @@
+project:
+  name: FlyRank Widget Platform
+  version: "1.0.0"
+  description: Embeddable Widget & Lead Capture Platform
+
+run: docker-compose up --build
+
+seed: No seed required
+
+test: python -m pytest -v
+
+base_url: http://localhost:8000
+
+health:
+
+  - GET /health/
+  - GET /health/ready
+
+authentication:
+
+  - POST /auth/register
+  - POST /auth/login
+
+widgets:
+
+  - GET /widgets/
+  - GET /widgets/{id}
+  - POST /widgets/
+  - PUT /widgets/{id}
+  - DELETE /widgets/{id}
+  - GET /widgets/{id}/embed
+
+public:
+
+  - GET /public/widget/{id}
+  - POST /public/submit/{id}
+
+dashboard:
+
+  - GET /dashboard/summary
+  - GET /dashboard/widgets
+  - GET /dashboard/countries
+
+tests:
+
+  framework: pytest
+
+  status: passing
+
+  passed: 32
+
+database:
+
+  engine: PostgreSQL
+
+  orm: SQLAlchemy
+
+documentation:
+
+  README.md
+
+  BUILDLOG.md
+
+  EVIDENCE.md
+
+environment:
+
+  .env.example
