@@ -216,3 +216,85 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Environment Variables
+.env
+.env.local
+.env.*
+
+# Ignore all env files except example
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# Python Distribution
+build/
+dist/
+*.egg-info/
+
+# Logs
+logs/
+*.log
+
+# Test Cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type Checking
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Database
+*.sqlite3
+*.db
+
+# Alembic
+alembic/versions/__pycache__/
+
+# Docker
+docker-data/
+postgres-data/
+
+# Uploaded Files
+uploads/
+media/
+
+# Generated Reports
+reports/
+
+# Temporary Files
+tmp/
+temp/
+
+# Node (if used for widget build)
+node_modules/
+npm-debug.log
+
+# Coverage
+.coverage.*
+coverage.xml
+
+# Python Wheels
+*.whl
